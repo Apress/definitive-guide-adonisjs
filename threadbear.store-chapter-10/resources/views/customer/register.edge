@@ -1,0 +1,41 @@
+@layout("layout")
+
+@section("header")
+    <h1>Register</h1>
+@endsection
+
+@section("content")
+    <form method="post">
+        <div class="form-group">
+            <label for="email">First name</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" value="{{ old("first_name", "") }}">
+            {{ hasErrorFor("first_name") ? getErrorFor("first_name") : "" }}
+        </div>
+        <div class="form-group">
+            <label for="email">Last name</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" value="{{ old("last_name", "") }}">
+            {{ hasErrorFor("last_name") ? getErrorFor("last_name") : "" }}
+        </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" value="{{ old("email", "") }}">
+            {{ hasErrorFor("email") ? getErrorFor("email") : "" }}
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password">
+            {{ hasErrorFor("password") ? getErrorFor("password") : "" }}
+        </div>
+        <div class="form-group">
+            <label for="confirm_password">Confirm password</label>
+            <input type="password" class="form-control" id="confirm_password" name="confirm_password">
+            {{ hasErrorFor("confirm_password") ? getErrorFor("confirm_password") : "" }}
+        </div>
+        <div class="form-group">
+            <label for="email">Nickname</label>
+            <input type="text" class="form-control" id="nickname" name="nickname" value="{{ old("nickname", "") }}">
+            {{ hasErrorFor("nickname") ? getErrorFor("nickname") : "" }}
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+@endsection

@@ -1,0 +1,11 @@
+@layout("layout")
+
+@section("header")
+    <h1>Oops</h1>
+@endsection
+
+@section("content")
+    @if(type === "PROFILE_MISSING") 
+        <p>Looks like that profile doesn't exist. Try another...</p>
+    @endif
+@endsection

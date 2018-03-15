@@ -1,0 +1,35 @@
+@layout("layout")
+
+@section("header")
+    <h1>Register</h1>
+@endsection
+
+@section("content")
+    <form method="post">
+        <div class="form-group">
+            <label for="email">First name</label>
+            <input type="text" class="form-control" id="first_name" name="first_name">
+        </div>
+        <div class="form-group">
+            <label for="email">Last name</label>
+            <input type="text" class="form-control" id="last_name" name="last_name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password">
+        </div>
+        <div class="form-group">
+            <label for="confirm-password">Confirm password</label>
+            <input type="password" class="form-control" id="confirm-password" name="confirm-password">
+        </div>
+        <div class="form-group">
+            <label for="email">Nickname</label>
+            <input type="text" class="form-control" id="nickname" name="nickname">
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+@endsection

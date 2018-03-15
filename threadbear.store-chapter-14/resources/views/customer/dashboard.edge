@@ -1,0 +1,41 @@
+@layout("layout")
+
+@section("header")
+    <h1>
+        Hello, {{ customer.displayName }}
+    </h1>
+@endsection
+
+@section("content")
+    <h2>Your products</h2>
+    @each(product in products)
+        <p>
+            {{ product.displayName }}
+            <strong>${{ product.price / 100 }}</strong>
+        </p>
+    @else
+        <p>
+            You haven't created any products
+        </p>
+    @endeach
+    <h2>Pending orders</h2>
+    @if(pendingOrders.length)
+        <ol>
+            @!each(order in pendingOrders, include = "customer/partial/order")
+        </ol>
+    @else
+        <p>
+            There are no pending orders.
+        </p>
+    @endif
+    <h2>Complete orders</h2>
+    @if(completeOrders.length)
+        <ol>
+            @!each(order in completeOrder, include = "customer/partial/order")
+        </ol>
+    @else
+        <p>
+            There are no complete orders.
+        </p>
+    @endif
+@endsection

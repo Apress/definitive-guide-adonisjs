@@ -1,0 +1,14 @@
+<li>
+    {{ order.buyer ? order.buyer.displayName : order.id }}
+    @if(order.items)
+        <ul>
+            @each(item in order.items)
+                <li>
+                    {{ item.quantity }} x
+                    {{ item.product.displayName }} at
+                    <strong>${{ item.price / 100 }}</strong>
+                </li>
+            @endeach
+        </ul>
+    @endif
+</li>

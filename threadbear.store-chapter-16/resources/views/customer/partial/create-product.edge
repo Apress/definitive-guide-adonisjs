@@ -1,0 +1,17 @@
+<h2>
+    Create product
+</h2>
+<form action={{ route("create-product", { customer: customer.nickname }) }} method="post" class="ajax-form">
+    {{ csrfField() }}
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" value="{{ old("name", "") }}">
+        {{ hasErrorFor("name") ? getErrorFor("name") : "" }}
+    </div>
+    <div class="form-group">
+        <label for="price">Price</label>
+        <input type="text" class="form-control" id="price" name="price" value="{{ old("price", "") }}">
+        {{ hasErrorFor("price") ? getErrorFor("price") : "" }}
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

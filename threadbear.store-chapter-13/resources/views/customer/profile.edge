@@ -1,0 +1,20 @@
+@layout("layout")
+
+@section("header")
+    <h1>
+        {{ customer.display_name }}'s profile
+    </h1>
+@endsection
+
+@section("content")
+    @each(product in products)
+        <p>
+            {{ toTitleCase(product.name) }}
+            <strong>${{ product.price / 100 }}</strong>
+        </p>
+    @else
+        <p>
+            {{ toTitleCase(customer.first_name) }} doesn't have any products
+        </p>
+    @endeach
+@endsection

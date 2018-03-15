@@ -1,0 +1,42 @@
+@layout("layout")
+
+@section("header")
+    <h1>
+        {{ customer.displayName }}'s profile
+    </h1>
+@endsection
+
+@section("content")
+    @each(product in products)
+        <p>
+            {{ product.displayName }}
+            <strong>${{ product.price / 100 }}</strong>
+            <!-- <button
+                data-buy-id="{{ product.id }}"
+                data-buy-name="{{ product.displayName }}"
+                data-buy-price="{{ product.price }}"
+            >buy now</button> -->
+            @if(session)
+                <div
+                    class="buy-now"
+                    data-id="{{ product.id }}"
+                    data-name="{{ product.displayName }}"
+                    data-price="{{ product.price }}">
+                </div>
+            @endif
+        </p>
+    @else
+        <p>
+            {{ customer.displayName }} doesn't have any products
+        </p>
+    @endeach
+    @if(session)
+        <div class="cart" data-seller={{ customer.id }} data-buyer={{ session }}>
+            Shopping cart goes here
+        </div>
+    @else
+        <div>
+            <a href="{{ route("login") }}">Log in</a> to purchase!
+        </div>
+    @endif
+@endsection

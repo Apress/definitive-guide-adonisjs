@@ -1,0 +1,19 @@
+@layout("layout")
+
+@section("header")
+    <h1>Login</h1>
+@endsection
+
+@section("content")
+    <form method="post">
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password">
+        </div>
+        <button type="submit" class="btn btn-primary">Log in</button>
+    </form>
+@endsection

@@ -1,0 +1,25 @@
+{
+    "scripts": {
+        "test": "mocha"
+    },
+    "private": true,
+    "dependencies": {
+        "@adonisjs/ace": "^4.0.4",
+        "@adonisjs/fold": "^4.0.2",
+        "@adonisjs/framework": "^4.0.18",
+        "@adonisjs/ignitor": "^1.0.6",
+        "@adonisjs/lucid": "^4.0.21",
+        "@adonisjs/session": "^1.0.19",
+        "@adonisjs/shield": "^1.0.4",
+        "@adonisjs/validator": "^4.0.6",
+        "currency-map-country": "^1.0.7",
+        "geoip-lite": "^1.2.1",
+        "js2xmlparser": "^3.0.0",
+        "sqlite3": "^3.1.13"
+    },
+    "devDependencies": {
+        "@adonisjs/bodyparser": "^1.0.6",
+        "cheerio": "^1.0.0-rc.2",
+        "mocha": "^3.5.0"
+    }
+}

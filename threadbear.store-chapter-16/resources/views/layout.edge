@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {{ css("/css/app.css") }}
+    </head>
+    <body>
+        <div class="container">
+            <header class="row">
+                <div class="col">
+                    @!section("header")
+                </div>
+            </header>
+            <main class="row">
+                <div class="col">
+                    @!section("content")
+                </div>
+            </main>
+        </div>
+        {{ script("/socket.io/socket.io.js") }}
+        <script src="https://js.stripe.com/v3/"></script>
+        {{ script("/js/app.js") }}
+    </body>
+</html>
